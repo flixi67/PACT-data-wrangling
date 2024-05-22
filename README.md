@@ -31,13 +31,18 @@ The first and third dataset contained metadata on the Secretary General reports 
 
 The single paragraphs were coded in a way that for each of the 37 distinct activities, the 8 engagement categories were added with the name of the report as well as the number of the paragraph. Therefore, this data allows for further analysis not yet carried out in the project, for example if more sensitive activities may be reported towards the end of reports, while politically desired activities may be reported at the beginning. Another option for further analysis could be which activities or levels of engagement are reported in close proximity in the text corpus.
 
+(ABB EINFÜGEN MIT ABDECKUNG DER BERICHTE)
+
 ### Scripts
 
 This repo contains four main scripts.
 
 > 0_utils.R
+>
 > 1_transform.R
+> 
 > 2_mission-month.R
+> 
 > 3_merge.R
 
 These four scripts have to be carried out chronologically in order to reproduce the data wrangling.

@@ -57,6 +57,15 @@ Lastly, '3_merge.R' adds last additional information, creates some more dummy va
 
 In this clean repository, extensive scripts to test the validity of the data were removed. You can contact felix.kube (a) uni-konstanz.de if you are interested in these or care to investigate the quality of the data and varifiability of the data.
 
+### Published datasets
+
+You can find our data also in the Harvard Dataverse. (LINK HARVARD DATAVERSE).
+
+(ADD DATA DESCRIPTIONS AS SOON AS THEY ARE FINALISED)
+
+Citation:
+(ADD CITATION (OF CODEBOOK???))
+
 ## Publications
 
 Otto, S., Kube, F., & Smidt, H. (2024). UN peacekeeping upon deployment: Peacekeeping activities in theory and practice. Cooperation and Conflict, 0(0). https://doi.org/10.1177/00108367241235888

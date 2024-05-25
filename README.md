@@ -44,6 +44,8 @@ This repo contains four main scripts.
 > 2_mission-month.R
 > 
 > 3_merge.R
+>
+> 3.1_merge_PACT1.R
 
 These four scripts have to be carried out chronologically in order to reproduce the data wrangling.
 
@@ -54,6 +56,8 @@ In '0_utils.R' are all the helper functions and very technical code that perform
 The script '2_mission-month.R' then performs the aggregation from report level data into calendar format data (mission year and mission month).
 
 Lastly, '3_merge.R' adds last additional information, creates some more dummy variables and exports the data to the published format.
+
+There is a complementary file in the archive - '3.1_merge_PACT1.R' - which contains the information on how PACT1.0 and PACT2.0 data was combined. However, it cannot be run as PACT1.0 data is not released yet.
 
 In this clean repository, extensive scripts to test the validity of the data were removed. You can contact felix.kube (a) uni-konstanz.de if you are interested in these or care to investigate the quality of the data and varifiability of the data.
 

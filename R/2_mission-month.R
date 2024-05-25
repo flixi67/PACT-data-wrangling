@@ -45,6 +45,5 @@ write_rds(mission_month, "out/PACT2_mission-month.Rds")
 
 write_rds(mission_year, "out/PACT2_mission-year.Rds")
 
-
 # remove everything except utility functions
 rm(list = setdiff(ls(), lsf.str()))

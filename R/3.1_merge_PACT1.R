@@ -5,7 +5,15 @@ require(openxlsx)
 source("R/0_utils.R")
 
 # read in PACT1 and get relevant variables for merging
-pact1 <- read.xlsx("data/pact1/carry_forward_aggregations_allData_onlyPKO_11-23-2020.xlsx")
+
+# NOTE: At the time of releasing PACT2, the data from PACT1 is still unreleased.
+# For this script, the Interactive visualization (flixi67.shinyapps.io/PACT) and
+# the data used in our publication (Otto, Kube and Smidt 2024), a preliminary
+# working version of the data was used. Therefore, some things (e.g. variable naming)
+# are subject to change.
+
+# This script should offer some practical guidance on how to match the differences
+# in activities and engagement categories between PACT1 and PACT2.
 
 pact1 <- pact1 %>%
   select(c("NamePKO", "Country", "Year", "Month", "Number.StartDate", "Number.DateOfReport", "Number.ReportNumber"),

@@ -1,6 +1,8 @@
 # Data wrangling for the Peacekeeping Activity Dataset 2.0
 
-More information on the data: ### HERE LINK EINFÜGEN ###
+More information on the data: [PACT 2.0 - Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TQ8ETA)
+
+More information on the project: [The Civilian Dimension of Peacekeeping Operations and Human Rights](https://www.uu.se/en/department/peace-and-conflict-research/research/project-pages/the-civilian-dimension-of-peacekeeping-operations-and-human-rights-promotion)
 
 ## What is Peacekeeping Activity (PACT) Data?
 
@@ -12,10 +14,10 @@ It is an extension to the Peackeeping Activity Dataset (PACT) of Hannah Smidt an
 
 ## How was the data collected?
 
-The data was collected by student coders. For that purpose, a database was set up containing the coding modalities according to the codebook (LINK CODEBOOK). Through this procedure, the quality of the raw output was improved. The coders underwent individual training with the project lead Sabine Otto in order to complete the task. We carried out intercoder reliability tests in order to assure a consistent quality of the data.
+The data was collected by student coders. For that purpose, a database was set up containing the coding modalities according to the [codebook](https://dataverse.harvard.edu/file.xhtml?fileId=10230088&version=1.0). Through this procedure, the quality of the raw output was improved. The coders underwent individual training with the project lead Sabine Otto in order to complete the task. We carried out intercoder reliability tests in order to assure a consistent quality of the data.
 
 Contributors:
-Masumi Honda, Sofia Kahma, Joanna Grace Nakabiito, and Felix Kube. Special thanks go to Hannah Smidt (https://hannahsmidt.com/), who introduced us to the coding procedure.
+Masumi Honda, Sofia Kahma, Joanna Grace Nakabiito, and Felix Kube. Special thanks go to [Hannah Smidt](https://hannahsmidt.com/), who introduced us to the coding procedure.
 
 ## In this repository
 
@@ -31,11 +33,11 @@ The first and third dataset contained metadata on the Secretary General reports 
 
 The single paragraphs were coded in a way that for each of the 37 distinct activities, the 8 engagement categories were added with the name of the report as well as the number of the paragraph. Therefore, this data allows for further analysis not yet carried out in the project, for example if more sensitive activities may be reported towards the end of reports, while politically desired activities may be reported at the beginning. Another option for further analysis could be which activities or levels of engagement are reported in close proximity in the text corpus.
 
-(ABB EINFÜGEN MIT ABDECKUNG DER BERICHTE)
+![Coverage plot showing the timerange of UNSG reports by UNPKOs](coverage.png)
 
 ### Scripts
 
-This repo contains four main scripts.
+This repo contains four main scripts and one additional script for merging PACT 1.0 and PACT 2.0 data.
 
 > 0_utils.R
 >
@@ -61,17 +63,11 @@ There is a complementary file in the archive - '3.1_merge_PACT1.R' - which conta
 
 In this clean repository, extensive scripts to test the validity of the data were removed. You can contact felix.kube (a) uni-konstanz.de if you are interested in these or care to investigate the quality of the data and varifiability of the data.
 
-### Published datasets
-
-You can find our data also in the Harvard Dataverse. (LINK HARVARD DATAVERSE).
-
-(ADD DATA DESCRIPTIONS AS SOON AS THEY ARE FINALISED)
-
-Citation:
-(ADD CITATION (OF CODEBOOK???))
+Please cite the dataset as follows:
+Otto, Sabine and Honda, Masumi (2024): Codebook for the Peacekeeping Activity (PACT) Dataset 2.0.
 
 ## Publications
 
 Otto, S., Kube, F., & Smidt, H. (2024). UN peacekeeping upon deployment: Peacekeeping activities in theory and practice. Cooperation and Conflict, 0(0). https://doi.org/10.1177/00108367241235888
 
-Kube, F. (2024). PACT Interactive Visualization (Shiny app). Published on GitHub.
+Kube, F. (2024). PACT Interactive Visualization (Shiny app). Published on GitHub and shinyapps.io.

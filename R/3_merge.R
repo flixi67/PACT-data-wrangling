@@ -14,7 +14,8 @@ paragraph <- read_rds(file = "out/transformed-paragraphs.Rds") %>%
   mutate(report_namePKO = str_replace(report_namePKO, "MIPONHU", "MIPONUH"),
          report_namePKO = str_replace(report_namePKO, "UNMISH", "UNSMIH"),
          report_namePKO = str_replace(report_namePKO, "UNPSG", "UNCPSG"),
-         PKO = str_extract(report_namePKO, "[A-Z]*"), .after = )
+         PKO = str_extract(report_namePKO, "[A-Z]*")) %>%
+  relocate(PKO, .after = report_namePKO)
 
 # clean paragraph data and remove empty paragraphs
 # check if empty coded entries are congruent with NA in paragraphNumber

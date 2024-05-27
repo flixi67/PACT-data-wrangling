@@ -8,7 +8,7 @@ filepaths <- dir("data/pact2", recursive = TRUE, full.names = TRUE)
 
 for (i in seq_along(filepaths)) {
   assign(filepaths[i] %>% str_extract("(?<=2/).+(?=/)"),
-         read_csv2(filepaths[i]))
+         read_csv(filepaths[i]))
 }
 
 rm(filepaths, i)
@@ -17,13 +17,13 @@ rm(filepaths, i)
 ec <- c("Monitor", "Outreach", "Meeting", "Advocate", "Assist", "MaterialSupport", "Implement", "ProvideSecurity")
 ec_additional <- c("AssistAgents", "AssistPolicies", "AssistOther") # for PoliceReform, MilitaryReform, JusticeReform, ElectoralSecurity
 engagements <- rep(list(ec), 37) %>% 
-  set_names(names(paragraph)[names(paragraph) %nin% c("report_namePKO",  "paragraphNumber", "paragraph_ID", "comments")]) %>% 
+  set_names(names(paragraph)[names(paragraph) %nin% c("report_namePKO",  "paragraphNumber", "paragraph_ID")]) %>% 
   map_at(c("PoliceReform", "MilitaryReform", "JusticeSectorReform", "ElectoralSecurity"), ~ c(.x, ec_additional))
 
 # unlist engagement categories to separate columns (unlist_engage in "0_utils.R" with spec = engagements)
 paragraph_dummy <- map_dfc(names(engagements), unlist_engage, spec = engagements) %>%
   set_names(map(names(engagements), ~ paste(.x, engagements[[.x]],sep = "__")) %>% unlist()) %>%
-  tibble(paragraph[, c("report_namePKO",  "paragraphNumber", "paragraph_ID", "comments")], .)
+  tibble(paragraph[, c("report_namePKO",  "paragraphNumber", "paragraph_ID")], .)
 
 # create involvement of 'International Actor' for each activity x engagement as separate dummy
 IA_dummy <- map_dfc(names(engagements), unlist_ia, spec = engagements) %>%

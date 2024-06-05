@@ -8,7 +8,7 @@ filepaths <- dir("data/pact2", recursive = TRUE, full.names = TRUE)
 
 for (i in seq_along(filepaths)) {
   assign(filepaths[i] %>% str_extract("(?<=2/).+(?=/)"),
-         read_csv(filepaths[i]))
+         read_csv2(filepaths[i]))
 }
 
 rm(filepaths, i)
